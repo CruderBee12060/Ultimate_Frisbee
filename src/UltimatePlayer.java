@@ -1,12 +1,16 @@
 import java.util.*;
 public class UltimatePlayer extends Person{
-    private static int jerseyNumber;
-    private String position;
+    private int jerseyNumber;
+    private static int num;
+    private String position = "";
 
     public UltimatePlayer(String firstName, String lastName, String p){
         super(firstName, lastName);
-        int jerseyNumber = 1;
-    String position = p;
+        if (position.equals("cutter")){
+            this.position = "cutter"
+        } else {
+            this.position = "handler"
+        }
     }
     public String getPosition(){
     return position;
