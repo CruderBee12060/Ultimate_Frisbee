@@ -1,15 +1,16 @@
 import java.util.*;
 public class UltimatePlayer extends Person{
-    private int jerseyNumber;
-    private static int num;
+    private static int jerseyNumber;
     private String position = "";
 
     public UltimatePlayer(String firstName, String lastName, String p){
         super(firstName, lastName);
         if (position.equals("cutter")){
-            this.position = "cutter"
+            this.position = "cutter";
+            jerseyNumber++;
         } else {
-            this.position = "handler"
+            this.position = "handler";
+            jerseyNumber++;
         }
     }
     public String getPosition(){
@@ -19,6 +20,6 @@ public class UltimatePlayer extends Person{
         return jerseyNumber;
     }
     public String toString(){
-    super.toString() + "\n\t" + "Jersey #:" + getJerseyNumber() + "\n\t" + "Position: " + getPosition();
+    return super.toString() + "\n   Jersey #:" + getJerseyNumber() + "\n   Position: " + getPosition();
     }
 }
