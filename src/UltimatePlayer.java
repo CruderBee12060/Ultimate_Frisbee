@@ -5,7 +5,8 @@ public class UltimatePlayer extends Person{
 
     public UltimatePlayer(String firstName, String lastName, String p){
         super(firstName, lastName);
-        if (position.equals("cutter")){
+        this.position= p;
+        if (p.equals("cutter")){
             this.position = "cutter";
             jerseyNumber++;
         } else {
@@ -14,12 +15,12 @@ public class UltimatePlayer extends Person{
         }
     }
     public String getPosition(){
-    return position;
+        return position;
     }
     public static int getJerseyNumber(){
         return jerseyNumber;
     }
     public String toString(){
-    return super.toString() + "\n   Jersey #:" + getJerseyNumber() + "\n   Position: " + getPosition();
+        return super.toString() + "\n   Jersey #:" + getJerseyNumber() + "\n   Position: " + getPosition();
     }
 }
